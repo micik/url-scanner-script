@@ -1,6 +1,7 @@
 <?php
+
 // 1. Use Composer autoloader
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 // 2. Instantiate Guzzle HTTP client
 $client = new \GuzzleHttp\Client();
@@ -18,6 +19,6 @@ $csv->each(function ($csvRow) use ($client) {
         }
     } catch (\Exception $e) {
         // 6. Send bad URLs to standard out
-        echo $csvRow[0] . PHP_EOL;
+        echo $csvRow[0].PHP_EOL;
     }
 });
